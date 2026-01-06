@@ -1,54 +1,64 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Rishitha Muddana | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f9f9f9;
-      color: #333;
-    }
-    h1, h2 {
-      color: #222;
-    }
-    .project {
-      margin-bottom: 20px;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rishitha Muddana | Full Stack Engineer</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h1>Rishitha Muddana</h1>
-  <p>Student | Developer | Your Skills</p>
+  <header class="hero">
+    <div class="container">
+      <h1>Rishitha Muddana</h1>
+      <p>Full Stack Engineer | Developer | AI Systems Builder</p>
+      <a href="assets/resume.pdf" class="btn" target="_blank">View Resume</a>
+    </div>
+  </header>
 
-  <h2>Resume</h2>
-  <p>
-    <a href="Rishitha_Muddana_Resume.pdf" target="_blank">Download my resume</a>
-  </p>
+  <main class="container">
 
-  <h2>Projects</h2>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I build production-ready engineering infrastructure, automation tooling, and developer platforms that scale. Below is my most impactful project I built while at my company, designed for controlled AI-assisted development in enterprise environments.</p>
+    </section>
 
-  <div class="project">
-    <h3>Project 1 Title</h3>
-    <p>Short description of what this project does.</p>
-    <img src="project1.png" alt="Project 1 Screenshot">
-  </div>
+    <section id="projects">
+      <h2>Featured Project — AI Engineering Gateway</h2>
 
-  <div class="project">
-    <h3>Project 2 Title</h3>
-    <p>Short description of what this project does.</p>
-    <img src="project2.png" alt="Project 2 Screenshot">
-  </div>
+      <div class="project-card">
+        <img src="assets/project1.png" alt="Secure Login UI">
+        <h3>AI Engineering Gateway</h3>
+        <p>This tool enables developers to generate code via AI models behind the company’s controlled API. All outputs are published directly into Git through secure commits or pull requests, with full audit logs. It centralizes AI licensing, reduces cost, and enables compliance-driven workflows in enterprise environments.</p>
+        <ul>
+          <li><strong>Centralized Enterprise AI Access</strong> — pooled licensure for cost efficiency.</li>
+          <li><strong>Audit Logging</strong> — every prompt, diff, and commit is stored for traceability.</li>
+          <li><strong>Secure Workflow</strong> — integrates with SSO, policy filters, and GitOps pipelines.</li>
+          <li><strong>CLI + Web UI</strong> — developers push commits either from terminal or browser UI.</li>
+        </ul>
+      </div>
 
+      <div class="project-gallery">
+        <img src="assets/project2.png" alt="Git Commit Manager Interface">
+        <img src="assets/project3.png" alt="Auto-Generated Code in Repo">
+        <img src="assets/project4.png" alt="Server Log Capture">
+        <img src="assets/project5.png" alt="Health & Response Metrics">
+      </div>
+
+    </section>
+
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <p>If you want to collaborate or talk about engineering systems, feel free to reach out!</p>
+      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>© 2025 Rishitha Muddana</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

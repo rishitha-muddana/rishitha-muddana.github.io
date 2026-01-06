@@ -1,14 +1,17 @@
-// Optional simple fade-in on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-});
+﻿const revealElements = document.querySelectorAll(".reveal");
 
-document.querySelectorAll('section, .project-card, .project-gallery img')
-.forEach(el => {
-  el.classList.add('hidden');
-  observer.observe(el);
-});
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const delay = entry.target.dataset.delay || 0;
+        entry.target.style.transitionDelay = `${delay}ms`;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+revealElements.forEach((el) => observer.observe(el));

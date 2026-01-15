@@ -53,6 +53,15 @@ img {
   max-width: 760px;
 }
 
+.inline-code {
+  font-family: "Courier New", monospace;
+  font-size: 0.95em;
+  background: rgba(27, 75, 75, 0.1);
+  color: var(--deep);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -262,6 +271,10 @@ img {
   margin-top: 32px;
 }
 
+.project-card--featured {
+  grid-template-columns: 1fr;
+}
+
 .project-visuals {
   display: grid;
   gap: 16px;
@@ -296,6 +309,11 @@ img {
   border-radius: 14px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
+
+.project-actions {
+  margin-top: 24px;
+}
+
 
 .meta {
   color: var(--sage);

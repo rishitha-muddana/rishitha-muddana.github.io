@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 1200px; height: 630px; overflow: hidden;
+      background: #FAFAF8;
+      font-family: 'Inter', sans-serif;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .dot-grid {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(201,150,58,0.12) 1px, transparent 1px);
+      background-size: 28px 28px;
+      -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 30%, transparent 100%);
+      pointer-events: none;
+    }
+    .content {
+      position: relative; z-index: 1;
+      padding: 80px;
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column; justify-content: center;
+      border: 1px solid #E8E4DC;
+    }
+    .label {
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #C9963A; margin-bottom: 20px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 72px; font-weight: 700; color: #0F1F3D;
+      line-height: 1; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .title { font-size: 22px; font-weight: 500; color: #1E3A5F; margin-bottom: 32px; }
+    .divider { width: 60px; height: 3px; background: #C9963A; border-radius: 2px; margin-bottom: 32px; }
+    .bio { font-size: 18px; color: #6B7280; line-height: 1.6; max-width: 680px; }
+    .corner {
+      position: absolute; bottom: 48px; right: 80px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 48px; font-weight: 700; color: rgba(15,31,61,0.06);
+      letter-spacing: 0.05em;
+    }
+    .url { position: absolute; bottom: 52px; left: 80px; font-size: 13px; color: #C9963A; font-weight: 500; }
+  </style>
+</head>
+<body>
+  <div class="dot-grid"></div>
+  <div class="content">
+    <div class="label">Software Engineer</div>
+    <h1>Rishitha Muddana</h1>
+    <div class="title">Fintech · Compliance Systems · AI Platforms</div>
+    <div class="divider"></div>
+    <div class="bio">Building financial infrastructure where precision isn't optional — from JP Morgan Chase to First Republic Bank to the frontier of AI automation.</div>
+  </div>
+  <div class="corner">RM</div>
+  <div class="url">rishitha-muddana.github.io</div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 /** Set to false once you've landed a role */
-export const openToWork = true
-export const targetingLabel = 'Senior / Staff / Principal · Fintech · Banking Systems · Platform Engineering'
+export const openToWork = false
+export const targetingLabel = 'Software Engineer · Northern Trust · Fintech · Banking Systems'
 
 export const siteConfig = {
   name: 'Rishitha Muddana',
@@ -16,7 +16,7 @@ export const siteConfig = {
 
 export const stats = [
   { value: 7, suffix: '+', label: 'Years of Experience' },
-  { value: 3, suffix: '', label: 'Banking Institutions' },
+  { value: 4, suffix: '', label: 'Banking Institutions' },
   { value: 99.9, suffix: '%', label: 'System Uptime SLA' },
   { value: 4, suffix: '', label: 'Cloud Platforms' },
 ]

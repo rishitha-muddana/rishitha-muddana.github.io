@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { stats } from '../data/config'
-import { useEffect, useState } from 'react'
 
 function AnimatedStat({ value, suffix, label }: { value: number; suffix: string; label: string }) {
   const ref = useRef<HTMLDivElement>(null)
@@ -83,27 +82,26 @@ export default function About() {
           {/* Bio text */}
           <motion.div {...fadeUp}>
             <p style={{ fontSize: '1.05rem', lineHeight: 1.8, color: '#1E3A5F', marginBottom: 20 }}>
-              I'm a software engineer who has spent the better part of a decade building
-              the systems that financial institutions rely on — compliance platforms, fraud detection
-              pipelines, real-time alerting infrastructure, and, increasingly, AI-powered automation.
+              I'm a software engineer at Northern Trust, one of the world's leading wealth management
+              and asset servicing institutions, where I build systems that underpin high-reliability
+              financial operations across global markets.
             </p>
             <p style={{ fontSize: '1.05rem', lineHeight: 1.8, color: '#1E3A5F', marginBottom: 20 }}>
-              At JP Morgan Chase and First Republic Bank, I worked inside the regulatory and compliance
-              technology stacks that sit between raw transaction data and legal obligation. These systems
-              don't get to have downtime or ambiguous results. They process millions of events daily,
+              Before that, I spent over three years deep inside the regulatory and compliance technology
+              stacks at JP Morgan Chase and First Republic Bank — the systems that sit between raw
+              transaction data and legal obligation. These platforms process millions of events daily,
               flag fraud in under a second, and must produce audit trails that satisfy federal examiners.
             </p>
             <p style={{ fontSize: '1.05rem', lineHeight: 1.8, color: '#1E3A5F', marginBottom: 20 }}>
-              My stack spans Python, Java, Spark, Kafka, and the major cloud platforms —
-              but the more interesting part is the judgment that comes with knowing when to
-              use each piece of that toolbox. I've migrated legacy platforms, designed multi-cloud
-              ingestion architectures, and shipped AI systems that financial operations teams
-              actually trust to make decisions.
+              My stack spans Python, Java, Spark, Kafka, and all major cloud platforms —
+              but the more interesting part is the judgment that comes with knowing when to use each
+              piece. I've migrated legacy platforms, designed multi-cloud ingestion architectures,
+              and shipped AI systems that financial operations teams actually trust to make decisions.
             </p>
             <p style={{ fontSize: '1.05rem', lineHeight: 1.8, color: '#1E3A5F' }}>
-              Currently I'm building AI automation for document and invoice workflows at Archkey
-              in San Francisco — bringing the same rigor from regulated financial systems to
-              the messy, human-driven world of procurement and accounts payable.
+              I'm drawn to the problems at the intersection of data reliability, regulatory complexity,
+              and modern engineering — where the cost of being wrong is real and the craft of building
+              it right genuinely matters.
             </p>
           </motion.div>
 
@@ -123,11 +121,11 @@ export default function About() {
                 Current Focus
               </h3>
               <ul style={{ margin: 0, padding: '0 0 0 16px', color: '#1E3A5F', lineHeight: 1.9, fontSize: '0.95rem' }}>
-                <li>AI-powered document intelligence and automated invoice processing</li>
-                <li>LLM workflows with confidence scoring and structured extraction</li>
-                <li>Vector search for vendor catalog matching and contract reconciliation</li>
-                <li>Containerized microservices on Azure with event-driven orchestration</li>
-                <li>Distributed systems design for high-reliability financial workflows</li>
+                <li>Core financial platform engineering at Northern Trust</li>
+                <li>High-reliability distributed systems for wealth management and asset servicing</li>
+                <li>Data integrity, lineage, and governance at institutional scale</li>
+                <li>Cloud platform modernization for regulated financial environments</li>
+                <li>Applying AI and automation to precision-sensitive financial workflows</li>
               </ul>
             </motion.div>
 
@@ -150,7 +148,7 @@ export default function About() {
               </div>
               <div>
                 <div style={{ fontWeight: 600, color: '#0F1F3D', fontSize: '0.95rem' }}>B.Tech Computer Science</div>
-                <div style={{ color: '#6B7280', fontSize: '0.85rem', marginTop: 2 }}>Gandhi Institute of Technology & Management · 2015 – 2019</div>
+                <div style={{ color: '#6B7280', fontSize: '0.85rem', marginTop: 2 }}>GITAM Deemed University · 2015 – 2019</div>
               </div>
             </motion.div>
           </div>

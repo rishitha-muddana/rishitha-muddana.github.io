@@ -79,7 +79,7 @@ export default function Hero() {
               margin: '0 0 20px',
               letterSpacing: '0.02em',
             }}>
-              Software Engineer · Fintech & Compliance Systems
+              Software Engineer · Northern Trust
             </motion.p>
 
             <motion.p {...fadeUp(0.2)} style={{
@@ -146,7 +146,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Social links */}
-            <motion.div {...fadeUp(0.32)} style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+            <motion.div {...fadeUp(0.32)} style={{ display: 'flex', gap: 16, alignItems: 'center', flexWrap: 'wrap' }}>
               <a href={siteConfig.linkedin} target="_blank" rel="noopener noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#0077B5', fontSize: '0.85rem', fontWeight: 500, textDecoration: 'none' }}>
                 <Linkedin size={18} />
@@ -157,12 +157,12 @@ export default function Hero() {
                 <Github size={18} />
                 GitHub
               </a>
-              <span style={{ color: '#E8E4DC', fontSize: '0.85rem' }}>·</span>
+              <span style={{ color: '#E8E4DC' }}>·</span>
               <span style={{ color: '#6B7280', fontSize: '0.85rem' }}>{siteConfig.location}</span>
             </motion.div>
           </div>
 
-          {/* Avatar / photo side */}
+          {/* Photo side */}
           <motion.div
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -177,29 +177,42 @@ export default function Hero() {
                 borderRadius: '50%',
                 zIndex: 0,
               }} />
-              {/* Avatar placeholder — replace src with your photo */}
               <div style={{
                 width: 280, height: 373,
                 borderRadius: 16,
-                background: 'linear-gradient(145deg, #E8E4DC 0%, #D4CFC5 100%)',
                 border: '2px solid rgba(201,150,58,0.3)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
                 position: 'relative',
                 zIndex: 1,
                 boxShadow: '0 20px 60px rgba(15,31,61,0.12)',
                 overflow: 'hidden',
+                background: 'linear-gradient(145deg, #E8E4DC 0%, #D4CFC5 100%)',
               }}>
-                <span style={{
-                  fontFamily: 'Cormorant Garamond, Georgia, serif',
-                  fontSize: '5rem',
-                  fontWeight: 700,
-                  color: 'rgba(15,31,61,0.25)',
-                  letterSpacing: '-0.02em',
-                }}>
-                  RM
-                </span>
+                <img
+                  src="/images/profile.jpg"
+                  alt="Rishitha Muddana"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center top',
+                    display: 'block',
+                  }}
+                  onError={e => {
+                    // Fallback to initials monogram if photo not found
+                    const el = e.currentTarget
+                    el.style.display = 'none'
+                    const parent = el.parentElement
+                    if (parent) {
+                      parent.style.display = 'flex'
+                      parent.style.alignItems = 'center'
+                      parent.style.justifyContent = 'center'
+                      const span = document.createElement('span')
+                      span.textContent = 'RM'
+                      span.style.cssText = 'font-family: Cormorant Garamond,Georgia,serif; font-size: 5rem; font-weight: 700; color: rgba(15,31,61,0.25); letter-spacing: -0.02em;'
+                      parent.appendChild(span)
+                    }
+                  }}
+                />
               </div>
             </div>
           </motion.div>
